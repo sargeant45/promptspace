@@ -1,0 +1,23 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.title {
+  font-size: 72pt;
+  font-weight: 900;
+}
+
+.content {
+  padding-top: 50px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+b {
+  font-weight: 900;
+}
+
+.chinese {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
