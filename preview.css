@@ -22,6 +22,7 @@ body {
     font-family: "Roboto", sans-serif;
     font-size: 13px;
     line-height: 18px;
+    font-weight: 300;
     color: #ccc;
 }
 #epiceditor-preview a {
@@ -73,14 +74,14 @@ body {
 #epiceditor-preview blockquote {
     padding: 13px 13px 21px 15px;
     margin-bottom: 18px;
-    font-family:georgia,serif;
+    font-family:  "Roboto", sans-serif;
     font-style: italic;
 }
 #epiceditor-preview blockquote:before {
     content:"\201C";
     font-size:40px;
     margin-left:-10px;
-    font-family:georgia,serif;
+    font-family: "Roboto", sans-serif;
     color:#eee;
 }
 #epiceditor-preview blockquote p {
