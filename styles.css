@@ -8,6 +8,11 @@ body {
   font-weight: 900;
 }
 
+.title-2 {
+  font-size: 40pt;
+  font-weight: 300;
+}
+
 .content {
   width: 200px;
   display: block;
