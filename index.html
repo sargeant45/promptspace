@@ -15,9 +15,6 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:900italic,300,300italic,900' rel='stylesheet' type='text/css'>
     <!-- Custom CSS -->
     <link href="styles.css" rel="stylesheet">
-    <!-- EpicEditor -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/epiceditor/0.2.2/themes/preview/github.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/epiceditor/0.2.2/themes/editor/epic-light.css" rel="stylesheet">
   </head>
   <body>
     <div class="container">
@@ -42,7 +39,43 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/epiceditor/0.2.2/js/epiceditor.min.js"></script>
     <!-- Scripts to run -->
     <script>
-    var editor = new EpicEditor().load();
+    var opts = {
+      container: 'epiceditor',
+      textarea: null,
+      basePath: 'epiceditor',
+      clientSideStorage: true,
+      localStorageName: 'epiceditor',
+      useNativeFullscreen: true,
+      parser: marked,
+      file: {
+        name: 'epiceditor',
+        defaultContent: '',
+        autoSave: 100
+      },
+      theme: {
+        base: 'https://cdnjs.cloudflare.com/ajax/libs/epiceditor/0.2.2/themes/base/epiceditor.css',
+        preview: 'https://cdnjs.cloudflare.com/ajax/libs/epiceditor/0.2.2/themes/preview/github.css',
+        editor: 'https://cdnjs.cloudflare.com/ajax/libs/epiceditor/0.2.2/themes/editor/epic-light.css'
+      },
+      button: {
+        preview: true,
+        fullscreen: true,
+        bar: "auto"
+      },
+      focusOnLoad: false,
+      shortcut: {
+        modifier: 18,
+        fullscreen: 70,
+        preview: 80
+      },
+      string: {
+        togglePreview: 'Toggle Preview Mode',
+        toggleEdit: 'Toggle Edit Mode',
+        toggleFullscreen: 'Enter Fullscreen'
+      },
+      autogrow: false
+    }
+    var editor = new EpicEditor(opts).load();
     </script>
   </body>
 </html>
