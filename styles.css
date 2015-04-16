@@ -9,15 +9,18 @@ body {
 }
 
 .content {
-  padding-top: 50px;
-  padding-bottom: 10px;
-  text-align: center;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 b {
   font-weight: 900;
 }
 
-.chinese {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+.container {
+  padding-top: 50px;
+  padding-bottom: 10px;
+  text-align: center;
 }
