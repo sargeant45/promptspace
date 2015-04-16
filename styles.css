@@ -39,3 +39,7 @@ b {
   padding-bottom: 10px;
   text-align: center;
 }
+
+.hide {
+  visibility: hidden;
+}
