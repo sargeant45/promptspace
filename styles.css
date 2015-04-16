@@ -43,3 +43,7 @@ b {
 .hide {
   visibility: hidden;
 }
+
+#epiceditor {
+  font-family: 'Roboto', sans-serif;
+}
