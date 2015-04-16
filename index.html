@@ -29,6 +29,7 @@
         <div id="epiceditor">
           
         </div>
+        <textarea id="text" class="hide"></textarea>
       </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -41,7 +42,7 @@
     <script>
     var opts = {
       container: 'epiceditor',
-      textarea: null,
+      textarea: 'text',
       basePath: 'epiceditor',
       clientSideStorage: true,
       localStorageName: 'epiceditor',
@@ -49,7 +50,7 @@
       parser: marked,
       file: {
         name: 'epiceditor',
-        defaultContent: '',
+        defaultContent: 'Write **Markdown** code here!',
         autoSave: 100
       },
       theme: {
