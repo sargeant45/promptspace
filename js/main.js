@@ -38,7 +38,6 @@ function doGist() {
     token: access,
     auth: "oauth"
   });
-  var gist = github.getGist();
   var gistopts = {
     "description": localStorage.getItem("gist-desc"),
     "files": {
@@ -47,7 +46,7 @@ function doGist() {
       }
     }
   };
-  gist.update(gistopts);
+  gist.create(gistopts);
 }
 
 function getUrlParameter(sParam)
