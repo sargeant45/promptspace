@@ -51,7 +51,7 @@ function doGist() {
       }
     }
   };
-  github.gist.create(gistopts);
+  github.Gist.create(gistopts);
 }
 
 function getUrlParameter(sParam)
