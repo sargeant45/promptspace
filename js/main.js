@@ -30,7 +30,7 @@ function gist() {
 }
 
 function doGist() {
-  $.post( "https://github.com/login/oauth/access_token", {code: getUrlParameter("code")})
+  $.post( "https://github.com/login/oauth/access_token", {code: getUrlParameter("code"), client_secret: "aa3229767ad306831c201f4b05fbc6117b9d2800", client_id: "ccd204482758a6a9b474"})
   .done(function( data ) {
     var access = data.access_token;
   });
@@ -40,6 +40,7 @@ function doGist() {
   });
   var gistopts = {
     "description": localStorage.getItem("gist-desc"),
+    "public": true,
     "files": {
       "prompt.txt": {
         "content": localStorage.getItem("gist-content"),
