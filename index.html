@@ -15,23 +15,26 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:900italic,300,300italic,900' rel='stylesheet' type='text/css'>
     <!-- Custom CSS -->
     <link href="css/styles.css" rel="stylesheet">
-    <link href="css/button.css" rel="stylesheet">
+    <!-- Custom scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/github.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="header">
         <h1><span class="title">prompt</span><span class="other-title">space</span></h1>
-        <h3>write about it</h3>
+        <h3>write your heart out</h3>
         <hr>
       </div>
       <div class="content">
-        <h2><b>Write about:</b></h2>
         <p id="prompt"></p>
-        <div id="epiceditor">
-        
-        </div>
+        <textarea id="input" class="greytextarea" placeholder="Write the prompt above."></textarea>
         <br>
-        <button data-label="New prompt!" id="grey"></button>
+        <br>
+        <div class="buttons">
+          <button onclick="promptMe();" class="greybutton">New Prompt</button> &nbsp; <span>&bull;</span> &nbsp; <button class="greybutton" onclick="gist();">Share to Gist</button>
+        </div>
       </div>
     </div>
     <textarea id="text" class="hide"></textarea>
@@ -39,50 +42,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <!-- EpicEditor -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/epiceditor/0.2.2/js/epiceditor.min.js"></script>
-    <!-- Custom scripts -->
-    <script src="js/main.js"></script>
-    <script src="js/button.js"></script>
-    <!-- Scripts to run -->
     <script>
-    var opts = {
-      container: 'epiceditor',
-      textarea: 'text',
-      basePath: '/',
-      clientSideStorage: true,
-      localStorageName: 'epiceditor',
-      useNativeFullscreen: true,
-      parser: marked,
-      file: {
-        name: 'epiceditor',
-        defaultContent: 'Write **Markdown** code here!',
-        autoSave: 100
-      },
-      theme: {
-        base: 'https://cdnjs.cloudflare.com/ajax/libs/epiceditor/0.2.2/themes/base/epiceditor.css',
-        preview: 'https://cdnjs.cloudflare.com/ajax/libs/epiceditor/0.2.2/themes/preview/preview-dark.css',
-        editor: 'https://cdnjs.cloudflare.com/ajax/libs/epiceditor/0.2.2/themes/editor/epic-dark.css',
-      },
-      button: {
-        preview: true,
-        fullscreen: true,
-        bar: "auto"
-      },
-      focusOnLoad: false,
-      shortcut: {
-        modifier: 18,
-        fullscreen: 70,
-        preview: 80
-      },
-      string: {
-        togglePreview: 'Toggle Preview Mode',
-        toggleEdit: 'Toggle Edit Mode',
-        toggleFullscreen: 'Enter Fullscreen'
-      },
-      autogrow: false
-    }
-    var editor = new EpicEditor(opts).load();
+    load();
     </script>
   </body>
 </html>

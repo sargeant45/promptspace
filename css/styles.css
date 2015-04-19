@@ -8,6 +8,10 @@ hr {
   background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
 }
 
+#prompt {
+  font-size: 16pt;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -35,10 +39,6 @@ b {
   font-weight: 900;
 }
 
-#epiceditor {
-  height: 50%;
-}
-
 .container {
   padding-top: 50px;
   padding-bottom: 10px;
@@ -47,4 +47,38 @@ b {
 
 .hide {
   visibility: hidden;
+}
+
+/* Cool Shit */
+.greybutton {
+  box-shadow: 0px 1px 3px #666666;
+  background: #292929;
+  padding: 10px 20px 10px 20px;
+  border: solid #292929 4px;
+  transition: box-shadow 3s, background 1s, color 1s, border 1s, border-radius 2s;
+  color: #D7DDDD;
+}
+.greybutton:hover {
+  color: #292929;
+  border: solid #D7DDDD 4px;
+  border-radius: 40px;
+  background: #D7DDDD;
+  box-shadow: 0px 1px 9px #666666;
+}
+
+.greytextarea {
+  font-family: inherit;
+  box-shadow: 0px 1px 3px #666666;
+  background: #292929;
+  padding: 10px 20px 10px 20px;
+  border: solid #292929 4px;
+  transition: box-shadow 3s;
+  color: #D7DDDD;
+  resize: none;
+  height: 200px;
+  width: 100%;
+}
+
+.greytextarea:hover {
+  box-shadow: 0px 1px 9px #666666;
 }
