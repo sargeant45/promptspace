@@ -41,12 +41,12 @@ function doGist() {
   var gistopts = {
     "description": localStorage.getItem("gist-desc"),
     "files": {
-      "prompt.md": {
+      "prompt.txt": {
         "content": localStorage.getItem("gist-content"),
       }
     }
   };
-  gist.create(gistopts);
+  github.gist.create(gistopts);
 }
 
 function getUrlParameter(sParam)
